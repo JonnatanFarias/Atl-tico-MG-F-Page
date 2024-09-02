@@ -117,3 +117,47 @@ footer {
 footer p {
     font-size: 0.9rem;
 }
+
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #212121;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on the height of your navbar */
+        left: 0;
+        background-color: #f8f9fa;
+        
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .card{
+        margin: 10px;
+    }
+}
